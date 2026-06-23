@@ -39,14 +39,13 @@
   .fix b{display:block;color:#18181b;font-size:13px;margin-bottom:3px}
   .open{border:1px solid #e4e4e7;border-radius:14px;padding:18px 20px;margin-top:22px}
   .oh{font-size:15px;font-weight:800;margin-bottom:11px}
-  .oi{font-size:12px;line-height:1.6;color:#52525b;padding:11px 14px;background:#fff7e6;border:1px solid rgba(245,158,11,.35);border-radius:10px;margin-bottom:8px}
-  .oi b{color:#92400e}
+  .oi{font-size:12px;line-height:1.6;color:#52525b;padding:11px 14px;border-radius:10px;margin-bottom:8px}
   .nxt{font-size:13px;font-weight:700;color:#fff;background:#18181b;border-radius:12px;padding:14px 18px;margin-top:6px}
 </style>
 </head>
 <body>
 <div class="doc">
-  <div class="head"><div class="t">Wave 2 · Activate — the new-tutor on-ramp</div><div class="s">Redesign brief · before &#8594; after · prepared for Hafiz · 23 June 2026</div></div>
+  <div class="head"><div class="t">Wave 2 · Activate — the new-tutor on-ramp</div><div class="s">Redesign brief · before &#8594; after · for Hafiz · finalized 23 June 2026</div></div>
 
   <div class="intro">Activate is the funnel feeder for everything in Wave 1: a tutor cannot apply to a request until they are verified. The North Star here is <b>verification-completion rate</b> and <b>time-to-first-application</b>. The live flow is 16 screens, and its bottleneck is the verification wizard. (Note: the live capture was blocked by an OTP throttle on the test number, so the "before" is reconstructed faithfully from the app's code; the verification flow is a form wizard, so this is reliable.)</div>
 
@@ -98,15 +97,44 @@
         <div style="font-size:11px;color:#52525b;margin:4px 0 12px">Ready to teach. Jobs that match you right now:</div>
         <div class="srow">Maths · Form 4 · RM94 <span style="background:#243cb3;color:#fff;padding:4px 11px;border-radius:999px;font-size:11px">Apply</span></div>
         <div class="srow">Physics · Form 5 · RM120 <span style="background:#243cb3;color:#fff;padding:4px 11px;border-radius:999px;font-size:11px">Apply</span></div>
-        <div class="bn" style="color:#1f7a44;font-style:italic">today there is NO nudge — the tutor lands on an empty home, a wasted activation moment</div>
+        <div class="bn" style="color:#1f7a44;font-style:italic">today there is NO nudge, the tutor lands on an empty home, a wasted activation moment</div>
       </div></div>
     </div>
   </div>
 
   <div class="sec">
-    <div class="sh">3 · The worst friction, fixed</div>
+    <div class="sh">3 · Half-done forms: resume, never restart</div>
+    <div class="ss">The one real risk of going linear, answered. Every step already saves to the server the moment it is finished, so a partial form is never lost; the redesign surfaces that with a resume point and a progress map.</div>
+    <div class="ba">
+      <div class="col"><div class="cl good">Reopen · resume</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div class="title">Welcome back, Aisha</div>
+        <div style="background:#243cb3;color:#fff;border-radius:12px;padding:14px;margin-top:10px">
+          <div style="font-size:15px;font-weight:800">4 of 7 done</div>
+          <div class="prog" style="background:rgba(255,255,255,.3);margin:9px 0 4px"><div class="pf" style="width:57%;background:#fff"></div></div>
+          <div style="font-size:10px;opacity:.9">Pick up where you left off</div>
+          <div style="background:#fff;color:#243cb3;text-align:center;font-weight:800;font-size:13px;padding:11px;border-radius:9px;margin-top:11px">Continue · Documents</div>
+        </div>
+        <div class="gn">resumes at the first unfinished step, not the start</div>
+      </div></div>
+      <div class="col"><div class="cl good">Progress map · jump or review</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div class="plab">Your verification · 4 of 7</div>
+        <div class="srow" style="color:#1f7a44">Bio details <span>&#10003;</span></div>
+        <div class="srow" style="color:#1f7a44">Education <span>&#10003;</span></div>
+        <div class="srow" style="color:#1f7a44">Emergency contact <span>&#10003;</span></div>
+        <div class="srow" style="color:#1f7a44">What you teach <span>&#10003;</span></div>
+        <div class="srow" style="border:1.5px solid #243cb3">Documents <span style="color:#243cb3;font-size:10px">now</span></div>
+        <div class="srow" style="color:#9a9aa0">Intro video <span>&#9711;</span></div>
+        <div class="gn">tap any step to jump back and edit, or skip ahead</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh">4 · The worst friction, fixed</div>
     <div class="fixrow">
-      <div class="fix"><b>IC validation</b>Cryptic "age must be 20-50" rejection becomes inline format help, and the age gate is opened up or explained (see the question below).</div>
+      <div class="fix"><b>IC validation</b>The 20-50 age gate is intentional and kept, so the redesign states the rule upfront ("Tutors must be 20-50") and checks the IC early: a clear rule and a fast, explained decline, instead of a cryptic rejection after the whole form is filled.</div>
       <div class="fix"><b>Document upload</b>4 files with no preview and vague labels become thumbnail previews, plain examples ("a clear headshot"), and an upload progress bar.</div>
       <div class="fix"><b>Intro video</b>"Speak clearly, introduce yourself" becomes a short on-screen script prompt + an example, so tutors are not guessing.</div>
       <div class="fix"><b>Success screen</b>"We will reach out" becomes an honest review-time expectation, then routes straight into the first-job nudge above.</div>
@@ -114,12 +142,12 @@
   </div>
 
   <div class="open">
-    <div class="oh">Open questions for Hafiz</div>
-    <div class="oi"><b>The IC age gate (20-50).</b> The current code rejects any tutor whose IC says they are under 20 or over 50. That likely excludes valid tutors — 18-19 university students and 50+ experienced teachers. Is the gate intentional, or should the redesign open it up?</div>
-    <div class="oi"><b>Confirm the direction.</b> The redesign turns the hub into a single linear flow with a progress bar and auto-advance. Confirm that is the on-ramp you want before we build.</div>
+    <div class="oh">Resolved · 23 June</div>
+    <div class="oi" style="background:#e9f5ee;border:1px solid rgba(31,122,68,.4)"><b style="color:#1f7a44">IC age gate (20-50): intentional, kept.</b> The redesign honors it by stating the rule upfront and checking the IC early, so an under-20 or over-50 applicant gets a clear, fast reason instead of a rejection after the whole form is filled.</div>
+    <div class="oi" style="background:#e9f5ee;border:1px solid rgba(31,122,68,.4)"><b style="color:#1f7a44">Linear direction: confirmed, with resume.</b> Half-done forms reopen at the first unfinished step (never restart), backed by a progress map to jump to or edit any step. Every step already persists server-side, so nothing is lost.</div>
   </div>
 
-  <div class="sec"><div class="nxt">On approval: build off main, isolated and PR-reviewed. The verification wizard is the centerpiece; everything else inherits its pattern.</div></div>
+  <div class="sec"><div class="nxt">Ready to build off main, isolated and PR-reviewed. The verification wizard is the centerpiece; everything else inherits its pattern.</div></div>
 </div>
 </body>
 </html>
