@@ -22,7 +22,8 @@
   .col{flex:1;min-width:0}
   .cl{font-size:10px;font-weight:800;text-align:center;padding:4px;border-radius:6px;margin-bottom:8px}
   .cl.b{background:#f1f1f3;color:#71717a}.cl.a{background:#e6eaf9;color:var(--tint)}
-  .ph{border-radius:18px;padding:13px;height:300px;overflow:hidden}
+  .ph{border-radius:30px;padding:16px 14px 12px;width:300px;max-width:100%;aspect-ratio:402/874;margin:0 auto;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.10)}
+  .ph::after{content:"";flex-shrink:0;width:38%;height:5px;border-radius:99px;background:rgba(0,0,0,.22);margin:auto auto 0}
   .ph.bf{background:#fff;border:1px solid #e2e2e6}
   .ph.af{background:var(--grey)}
   .sb{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;margin-bottom:11px;color:#18181b}
@@ -50,6 +51,7 @@
   .foot{margin-top:8px;font-size:13px;font-weight:700;color:#fff;background:#475569;border-radius:12px;padding:14px 18px}
   .cut{display:inline-block;font-size:9px;font-weight:800;background:#fff7e6;color:#92400e;border-radius:99px;padding:2px 8px;margin-left:6px;vertical-align:middle}
   .keepg{display:inline-block;font-size:9px;font-weight:800;background:#e9f5ee;color:#1a5c38;border-radius:99px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+  @media (max-width:680px){ .doc{max-width:100%} .pair{flex-direction:column;gap:24px} .ph{width:330px} .head .t{font-size:20px} }
 </style>
 </head>
 <body>
