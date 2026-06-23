@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wave 2 · Activate — new-tutor on-ramp</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{background:#fff}
+  body{margin:0;padding:24px 16px;font-family:-apple-system,system-ui,"Segoe UI",sans-serif;color:#18181b;-webkit-print-color-adjust:exact;print-color-adjust:exact;--tint:#243cb3}
+  .doc{max-width:780px;margin:0 auto}
+  .head{background:#243cb3;color:#fff;border-radius:16px;padding:24px 26px}
+  .head .t{font-size:24px;font-weight:800;letter-spacing:-.3px}
+  .head .s{font-size:12.5px;opacity:.9;margin-top:5px;line-height:1.5}
+  .intro{font-size:13px;line-height:1.65;color:#3f3f46;border:1px solid #e4e4e7;border-radius:14px;padding:16px 20px;margin:16px 0}
+  .intro b{color:#243cb3}
+  .sec{margin:22px 0}
+  .sh{font-size:17px;font-weight:800;margin-bottom:4px}
+  .ss{font-size:12px;color:#71717a;margin-bottom:13px;line-height:1.5}
+  .ba{display:flex;gap:14px}
+  .col{flex:1;min-width:0}
+  .cl{font-size:10px;font-weight:800;text-align:center;padding:4px;border-radius:6px;margin-bottom:8px}
+  .cl.bad{background:#fdeaea;color:#9b2c2c}.cl.good{background:#e6f3ec;color:#1f7a44}
+  .ph{background:#F2F2F7;border-radius:16px;padding:13px;min-height:300px}
+  .sb{display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-bottom:10px}
+  .title{font-size:17px;font-weight:800}.sub{font-size:10.5px;color:#71717a;margin:3px 0 9px;line-height:1.4}
+  .dots{font-size:13px;color:#c4c4c8;letter-spacing:4px;margin-bottom:11px}
+  .srow{background:#fff;border-radius:9px;padding:13px 12px;margin-bottom:8px;font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .req{font-size:10.5px;font-weight:700;color:#9b2c2c}
+  .bn{font-size:11px;font-style:italic;color:#9b2c2c;margin-top:10px;text-align:center;line-height:1.45}
+  .prog{height:7px;background:#e0e0e6;border-radius:999px;overflow:hidden;margin-bottom:7px}.pf{width:43%;height:100%;background:#243cb3;border-radius:999px}
+  .plab{font-size:12px;font-weight:800;color:#243cb3;margin-bottom:12px}
+  .fld{background:#fff;border-radius:9px;padding:12px;margin-bottom:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .fl{font-size:10px;color:#9a9aa0;font-weight:600}.fv{font-size:13.5px;font-weight:700;margin-top:2px}.fhelp{font-size:9.5px;color:#1f7a44;margin-top:3px}
+  .cta{background:#243cb3;color:#fff;text-align:center;font-size:15px;font-weight:600;padding:13px;border-radius:999px;margin-top:11px}
+  .gn{font-size:11px;font-style:italic;color:#1f7a44;margin-top:10px;text-align:center;line-height:1.45}
+  .fixrow{display:flex;gap:12px;flex-wrap:wrap}
+  .fix{flex:1;min-width:200px;border:1px solid #e4e4e7;border-radius:11px;padding:13px 15px;font-size:12px;line-height:1.55;color:#52525b}
+  .fix b{display:block;color:#18181b;font-size:13px;margin-bottom:3px}
+  .open{border:1px solid #e4e4e7;border-radius:14px;padding:18px 20px;margin-top:22px}
+  .oh{font-size:15px;font-weight:800;margin-bottom:11px}
+  .oi{font-size:12px;line-height:1.6;color:#52525b;padding:11px 14px;background:#fff7e6;border:1px solid rgba(245,158,11,.35);border-radius:10px;margin-bottom:8px}
+  .oi b{color:#92400e}
+  .nxt{font-size:13px;font-weight:700;color:#fff;background:#18181b;border-radius:12px;padding:14px 18px;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="head"><div class="t">Wave 2 · Activate — the new-tutor on-ramp</div><div class="s">Redesign brief · before &#8594; after · prepared for Hafiz · 23 June 2026</div></div>
+
+  <div class="intro">Activate is the funnel feeder for everything in Wave 1: a tutor cannot apply to a request until they are verified. The North Star here is <b>verification-completion rate</b> and <b>time-to-first-application</b>. The live flow is 16 screens, and its bottleneck is the verification wizard. (Note: the live capture was blocked by an OTP throttle on the test number, so the "before" is reconstructed faithfully from the app's code; the verification flow is a form wizard, so this is reliable.)</div>
+
+  <div class="sec">
+    <div class="sh">1 · The bottleneck: a hub, not a flow</div>
+    <div class="ss">Today the wizard is a menu. A tutor taps a step, fills it, gets dumped back to the menu, and hunts for the next one. No "step X of N", no auto-advance. This is the single biggest drop-off driver. The fix is a linear, progress-tracked flow.</div>
+    <div class="ba">
+      <div class="col"><div class="cl bad">BEFORE · live</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div class="title">Applying as a Tutor</div><div class="sub">Complete your profile to receive job requests.</div>
+        <div class="dots">&#9711; &#9711; &#9711; &#9711; &#9711; &#9711; &#9711;</div>
+        <div class="srow">Bio details <span class="req">Required &#8250;</span></div>
+        <div class="srow">Education <span class="req">Required &#8250;</span></div>
+        <div class="srow">Emergency contact <span class="req">Required &#8250;</span></div>
+        <div class="srow">Documents <span class="req">Required &#8250;</span></div>
+        <div class="bn">tap one &#8594; fill &#8594; back to this menu &#8594; find the next yourself</div>
+      </div></div>
+      <div class="col"><div class="cl good">AFTER · redesign</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div class="prog"><div class="pf"></div></div><div class="plab">Step 3 of 7 · Education</div>
+        <div class="fld"><div class="fl">Highest education</div><div class="fv">Bachelor's degree</div></div>
+        <div class="fld"><div class="fl">Field of study</div><div class="fv">Mathematics</div></div>
+        <div class="fld"><div class="fl">Institution</div><div class="fv">Universiti Malaya</div></div>
+        <div class="cta">Continue</div>
+        <div class="gn">one progress bar, one Continue that auto-advances</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh">2 · The two activation bookends</div>
+    <div class="ss">The biggest activation wins sit at the ends of the flow.</div>
+    <div class="ba">
+      <div class="col"><div class="cl good">Entry · reframed Home</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div class="title">Welcome, Aisha</div>
+        <div style="background:#243cb3;color:#fff;border-radius:12px;padding:14px;margin-top:10px">
+          <div style="font-size:15px;font-weight:800">1 step from your first job</div>
+          <div class="prog" style="background:rgba(255,255,255,.3);margin:9px 0 4px"><div class="pf" style="width:5%;background:#fff"></div></div>
+          <div style="font-size:10px;opacity:.9">0 of 7 done</div>
+          <div style="background:#fff;color:#243cb3;text-align:center;font-weight:800;font-size:13px;padding:11px;border-radius:9px;margin-top:11px">Start verifying · ~10 min</div>
+        </div>
+        <div style="font-size:10.5px;color:#71717a;margin-top:11px">&#128274; Unlocks after: apply to jobs · get paid</div>
+        <div class="gn">vs today's vague "Verify Your Profile" banner that dumps you into the menu</div>
+      </div></div>
+      <div class="col"><div class="cl good">Exit · first-job nudge (NEW)</div><div class="ph">
+        <div class="sb"><span>9:41</span><span>&#9646;&#9646;&#9646;</span></div>
+        <div style="font-size:16px;font-weight:800;color:#1f7a44">&#10003; You're verified!</div>
+        <div style="font-size:11px;color:#52525b;margin:4px 0 12px">Ready to teach. Jobs that match you right now:</div>
+        <div class="srow">Maths · Form 4 · RM94 <span style="background:#243cb3;color:#fff;padding:4px 11px;border-radius:999px;font-size:11px">Apply</span></div>
+        <div class="srow">Physics · Form 5 · RM120 <span style="background:#243cb3;color:#fff;padding:4px 11px;border-radius:999px;font-size:11px">Apply</span></div>
+        <div class="bn" style="color:#1f7a44;font-style:italic">today there is NO nudge — the tutor lands on an empty home, a wasted activation moment</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sh">3 · The worst friction, fixed</div>
+    <div class="fixrow">
+      <div class="fix"><b>IC validation</b>Cryptic "age must be 20-50" rejection becomes inline format help, and the age gate is opened up or explained (see the question below).</div>
+      <div class="fix"><b>Document upload</b>4 files with no preview and vague labels become thumbnail previews, plain examples ("a clear headshot"), and an upload progress bar.</div>
+      <div class="fix"><b>Intro video</b>"Speak clearly, introduce yourself" becomes a short on-screen script prompt + an example, so tutors are not guessing.</div>
+      <div class="fix"><b>Success screen</b>"We will reach out" becomes an honest review-time expectation, then routes straight into the first-job nudge above.</div>
+    </div>
+  </div>
+
+  <div class="open">
+    <div class="oh">Open questions for Hafiz</div>
+    <div class="oi"><b>The IC age gate (20-50).</b> The current code rejects any tutor whose IC says they are under 20 or over 50. That likely excludes valid tutors — 18-19 university students and 50+ experienced teachers. Is the gate intentional, or should the redesign open it up?</div>
+    <div class="oi"><b>Confirm the direction.</b> The redesign turns the hub into a single linear flow with a progress bar and auto-advance. Confirm that is the on-ramp you want before we build.</div>
+  </div>
+
+  <div class="sec"><div class="nxt">On approval: build off main, isolated and PR-reviewed. The verification wizard is the centerpiece; everything else inherits its pattern.</div></div>
+</div>
+</body>
+</html>
