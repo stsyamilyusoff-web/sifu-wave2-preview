@@ -27,23 +27,18 @@
   .ph.center{justify-content:center}
   .ph::after{content:"";flex-shrink:0;width:38%;height:5px;border-radius:99px;background:rgba(0,0,0,.22);margin:11px auto 0}
   .sp{flex:1 1 auto;min-height:10px}
-  .sb{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;margin-bottom:12px;color:#18181b}
   .t1{font-size:20px;font-weight:800;line-height:1.15}
   .sub{font-size:11px;color:#71717a;margin:5px 0 13px;line-height:1.45}
-  .cap{font-size:10px;color:#9a9aa0;text-align:center;font-weight:600;margin-bottom:7px}
-  /* grouped card (iOS inset-grouped) */
   .grp{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.05);margin-bottom:9px}
   .gr{padding:12px 13px;border-top:1px solid #f0f0f2}.gr:first-child{border-top:none}
   .fl{font-size:10px;color:#9a9aa0;font-weight:600}.fv{font-size:13.5px;font-weight:700;margin-top:2px}
   .grow{display:flex;align-items:center;gap:10px}
-  /* before plain */
   .bf .inp{border:1px solid #cfcfd4;border-radius:7px;padding:12px;font-size:12px;color:#9a9aa0;margin-bottom:10px}
   .bf .btn{background:#243cb3;color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:13px;border-radius:8px}
   .bf .lk{font-size:11px;color:#71717a;text-align:center;margin-top:11px}
   .bf .dots{display:flex;gap:5px;margin-bottom:12px;justify-content:center}.bf .dots i{width:7px;height:7px;border-radius:999px;background:#d4d4d8}.bf .dots i.on{background:#243cb3;width:18px;border-radius:99px}
   .bf .otp{display:flex;gap:8px;margin:10px 0 12px}.bf .otp b{flex:1;border:1px solid #cfcfd4;border-radius:8px;text-align:center;padding:14px 0;font-size:17px;color:#18181b;font-weight:700}
   .bf .timer{font-size:11px;color:#b0b0b6;text-align:center}
-  /* after */
   .af .cta{background:var(--tint);color:#fff;text-align:center;font-size:15px;font-weight:600;padding:14px;border-radius:999px}
   .af .lk{font-size:11px;color:var(--tint);text-align:center;margin-top:11px;font-weight:600}
   .af .dots{display:flex;gap:6px;margin-bottom:13px;justify-content:center}.af .dots i{width:7px;height:7px;border-radius:999px;background:#cdd3ea}.af .dots i.on{background:var(--tint);width:20px;border-radius:99px}
@@ -54,10 +49,9 @@
   .bf .hero{background:#ececf0;color:#b0b0b6;font-size:34px;height:200px}
   .af .hero{background:linear-gradient(135deg,#243cb3,#3a52c8);color:#fff;font-size:42px;height:215px}
   .prog{height:6px;background:#d8def0;border-radius:99px;margin-bottom:9px}.prog i{display:block;height:100%;background:#243cb3;border-radius:99px}
-  .plb{font-size:11px;font-weight:800;color:#243cb3;margin-bottom:12px}
+  .plb{font-size:11px;font-weight:800;color:#243cb3;margin-bottom:13px;letter-spacing:.2px}
   .chip{background:#243cb3;color:#fff;border-radius:99px;padding:6px 12px;font-size:11px;font-weight:700}
   .chipo{background:#fff;border:1px solid #d3d9f0;color:#243cb3;border-radius:99px;padding:6px 12px;font-size:11px;font-weight:700}
-  .icon{text-align:center;font-size:46px;margin:8px 0 12px}
   .foot{margin-top:8px;font-size:13px;font-weight:700;color:#fff;background:#475569;border-radius:12px;padding:14px 18px}
   .cut{display:inline-block;font-size:9px;font-weight:800;background:#fff7e6;color:#92400e;border-radius:99px;padding:2px 8px;margin-left:6px;vertical-align:middle}
   .keepg{display:inline-block;font-size:9px;font-weight:800;background:#e9f5ee;color:#1a5c38;border-radius:99px;padding:2px 8px;margin-left:6px;vertical-align:middle}
@@ -66,7 +60,7 @@
 </head>
 <body>
 <div class="doc">
-  <div class="head"><div class="t">Wave 2 · Activate, complete reskin + revamp</div><div class="s">Every screen, before &#8594; after · the verification gate cut <b style="color:#9be6b8">7 &#8594; 4 steps</b> · short steps by design (white space is intentional, per Apple HIG) · Sifututor design language · for Hafiz · 24 June 2026</div></div>
+  <div class="head"><div class="t">Wave 2 · Activate, complete reskin + revamp</div><div class="s">Every screen, before &#8594; after · the gate cut <b style="color:#9be6b8">7 &#8594; 4 steps</b> with a progress bar on each · short steps by design (white space is intentional, per Apple HIG) · Sifututor design language · for Hafiz · 24 June 2026</div></div>
 
   <div class="sech">Entry, the on-ramp</div>
   <div class="secs">The first four screens a new tutor sees. Reskin only, brought up to the Sifututor design language with calm, native layout.</div>
@@ -131,7 +125,7 @@
 
   <div class="screen">
     <div class="scn">4 · Update profile</div>
-    <div class="scd">Two fields in a grouped card, referral as a reward-teased link, button pinned.</div>
+    <div class="scd">Two fields in a grouped card, referral in one reward-teased line, button pinned.</div>
     <div class="pair">
       <div class="col"><div class="cl b">BEFORE</div><div class="ph bf">
         <div class="t1">Update Profile</div>
@@ -148,7 +142,7 @@
           <div class="gr"><div class="fl">Full name</div><div class="fv">Aisha Rahman</div></div>
           <div class="gr"><div class="fl">Email</div><div class="fv">aisha@email.com</div></div>
         </div>
-        <div style="font-size:11px;margin:1px 0 9px;display:flex;justify-content:space-between;align-items:center"><span style="color:#243cb3;font-weight:600">&#127873; Have a referral code?</span><span style="color:#71717a;font-size:10px">You both earn RM50 &#8250;</span></div>
+        <div style="font-size:11px;color:#243cb3;font-weight:600;margin:1px 0 9px">&#127873; Have a referral code? You both earn RM50 &#8250;</div>
         <div style="font-size:11px;color:#18181b;display:flex;gap:6px"><span style="color:#243cb3">&#9745;</span> I agree to the <span style="color:#243cb3;font-weight:600">Declaration</span></div>
         <div class="sp"></div><div class="cta">Create account</div>
       </div></div>
@@ -156,11 +150,11 @@
   </div>
 
   <div class="sech">Verification, the 4-step gate</div>
-  <div class="secs">Each step holds only what it needs: <b>identity, qualifications, documents, and a short video</b>. Steps stay short on purpose, the white space is intentional (Apple HIG: content up top, button pinned to the bottom). The IC age check fires the instant the IC is typed.</div>
+  <div class="secs">Each step holds only what it needs, with a progress bar so the tutor always knows how far they are. Steps stay short on purpose, the white space is intentional (Apple HIG: content up top, button pinned to the bottom).</div>
 
   <div class="screen">
     <div class="scn">5 · Bio details &nbsp;<span style="font-size:10px;color:#1f7a44;font-weight:700">friction fix</span></div>
-    <div class="scd">Three fields, a grouped card, the IC validated early with a clear reason.</div>
+    <div class="scd">Three fields, a grouped card, the IC validated early with a clear reason. Progress bar at the top.</div>
     <div class="pair">
       <div class="col"><div class="cl b">BEFORE</div><div class="ph bf">
         <div class="t1">Bio Details</div>
@@ -171,6 +165,7 @@
         <div class="sp"></div><div class="btn">Continue</div>
       </div></div>
       <div class="col"><div class="cl a">AFTER</div><div class="ph af">
+        <div class="prog"><i style="width:25%"></i></div><div class="plb">Step 1 of 4</div>
         <div class="t1">Your details</div>
         <div class="sub">Takes a minute. Your information stays private.</div>
         <div class="grp">
@@ -178,8 +173,7 @@
           <div class="gr"><div class="fl">IC number</div><div class="fv">960101-14-5678</div><div style="font-size:9.5px;color:#1f7a44;margin-top:3px;font-weight:600">&#10003; Age 28, you qualify</div></div>
           <div class="gr"><div class="fl">Address</div><div class="fv">12 Jalan Bukit, Selangor</div></div>
         </div>
-        <div class="sp"></div>
-        <div class="cap">Step 1 of 4</div><div class="cta">Continue</div>
+        <div class="sp"></div><div class="cta">Continue</div>
       </div></div>
     </div>
     <div style="display:flex;gap:10px;margin-top:11px">
@@ -201,6 +195,7 @@
         <div class="sp"></div><div class="btn">Continue</div>
       </div></div>
       <div class="col"><div class="cl a">AFTER</div><div class="ph af">
+        <div class="prog"><i style="width:50%"></i></div><div class="plb">Step 2 of 4</div>
         <div class="t1">Education</div>
         <div class="sub">Your highest qualification.</div>
         <div class="grp">
@@ -208,8 +203,7 @@
           <div class="gr"><div class="fl">Field of study</div><div class="fv">Mathematics</div></div>
           <div class="gr"><div class="fl">Institution</div><div class="fv">Universiti Malaya</div></div>
         </div>
-        <div class="sp"></div>
-        <div class="cap">Step 2 of 4</div><div class="cta">Continue</div>
+        <div class="sp"></div><div class="cta">Continue</div>
       </div></div>
     </div>
   </div>
@@ -227,16 +221,16 @@
         <div class="sp"></div><div class="btn">Continue</div>
       </div></div>
       <div class="col"><div class="cl a">AFTER</div><div class="ph af">
+        <div class="prog"><i style="width:75%"></i></div><div class="plb">Step 3 of 4</div>
         <div class="t1">Documents</div>
         <div class="sub">Clear files, under 2MB each.</div>
         <div class="grp">
           <div class="gr grow"><span style="font-size:16px">&#128196;</span><div style="flex:1"><div class="fv" style="font-size:12px">Resume</div></div><span style="font-size:9.5px;color:#1f7a44;font-weight:700">done &#10003;</span></div>
           <div class="gr grow"><span style="font-size:16px">&#127891;</span><div style="flex:1"><div class="fv" style="font-size:12px">Transcript</div></div><span style="font-size:9.5px;color:#1f7a44;font-weight:700">done &#10003;</span></div>
           <div class="gr grow"><span style="font-size:16px">&#129534;</span><div style="flex:1"><div class="fv" style="font-size:12px">Your photo</div><div class="fl">a clear headshot</div></div><span style="font-size:10px;color:#243cb3;font-weight:700">Upload</span></div>
-          <div class="gr grow"><span style="font-size:16px">&#128196;</span><div style="flex:1"><div class="fv" style="font-size:12px">IC front</div><div style="height:3px;background:#e3e6f0;border-radius:99px;margin-top:4px"><div style="width:60%;height:100%;background:#243cb3;border-radius:99px"></div></div></div><span style="font-size:9.5px;color:#243cb3;font-weight:700">60%</span></div>
+          <div class="gr grow"><span style="font-size:16px">&#128196;</span><div style="flex:1"><div class="fv" style="font-size:12px">Front of IC</div><div class="fl" style="color:#243cb3;font-weight:600">Uploading&hellip; 60%</div><div style="height:3px;background:#e3e6f0;border-radius:99px;margin-top:4px"><div style="width:60%;height:100%;background:#243cb3;border-radius:99px"></div></div></div></div>
         </div>
-        <div class="sp"></div>
-        <div class="cap">Step 3 of 4</div><div class="cta">Continue</div>
+        <div class="sp"></div><div class="cta">Continue</div>
       </div></div>
     </div>
     <div class="scd" style="margin-top:6px">Done, uploading, to-do, each visible, so nothing fails silently.</div>
@@ -253,10 +247,10 @@
         <div class="btn" style="margin-top:12px">Upload Video</div>
       </div></div>
       <div class="col"><div class="cl a">AFTER</div><div class="ph af">
-        <div class="cap" style="text-align:left;color:#243cb3">Step 4 of 4</div>
+        <div class="prog"><i style="width:100%"></i></div><div class="plb">Step 4 of 4</div>
         <div class="t1">This is how parents choose you</div>
         <div class="sub">Record a short intro. We verify it is really you.</div>
-        <div class="hero" style="height:120px;font-size:32px">&#128249;</div>
+        <div class="hero" style="height:118px;font-size:32px">&#128249;</div>
         <div style="background:#fff;border:1px solid #e2e6f3;border-radius:11px;padding:11px"><div style="font-size:9px;color:#9a9aa0;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Tips for a video that wins jobs</div><div style="font-size:10px;line-height:1.7;color:#18181b">&#9728;&#65039; Good light, face the camera<br>&#128522; Be warm and yourself<br>&#11088; Lead with your strongest subject<br>&#9201;&#65039; Under a minute is plenty</div></div>
         <div class="sp"></div>
         <div style="display:flex;gap:8px"><div style="flex:1;background:#243cb3;color:#fff;text-align:center;font-size:12px;font-weight:600;padding:13px;border-radius:999px">&#9210; Record</div><div style="flex:1;background:#fff;border:1px solid #d3d9f0;color:#243cb3;text-align:center;font-size:12px;font-weight:600;padding:13px;border-radius:999px">Choose</div></div>
@@ -368,7 +362,8 @@
   <div style="border:1px solid #e4e4e7;border-radius:14px;padding:16px 20px;margin-top:22px">
     <div style="font-size:15px;font-weight:800;margin-bottom:10px">Notes for Hafiz (Wave 2)</div>
     <div style="font-size:11.5px;line-height:1.55;color:#52525b;background:#fff7e6;border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:10px 13px;margin-bottom:8px"><b>IC + full name are locked</b> after verification (no self-edit). A change routes to admin re-review or a systematic re-check, your call which.</div>
-    <div style="font-size:11.5px;line-height:1.55;color:#52525b;background:#fff7e6;border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:10px 13px">Short steps with white space are intentional (Apple HIG + completion data); we do not pad them with fields.</div>
+    <div style="font-size:11.5px;line-height:1.55;color:#52525b;background:#fff7e6;border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:10px 13px;margin-bottom:8px">Short steps with white space are intentional (Apple HIG + completion data); we do not pad them with fields.</div>
+    <div style="font-size:11.5px;line-height:1.55;color:#52525b;background:#eef1fb;border:1px solid rgba(36,60,179,.25);border-radius:9px;padding:10px 13px"><b>Open:</b> Face ID sign-in is a returning-user feature, recommended for a later login pass (or a one-screen opt-in after first login), not the verification on-ramp.</div>
   </div>
 
   <div class="foot">Out of scope here, on purpose: the tutor PROFILE (self-view + the parent-facing showcase) and a post-class parent rating + review system are their own pitch and wave, coming next. This brief is the Wave 2 verification on-ramp only.</div>
